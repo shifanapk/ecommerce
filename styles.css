@@ -1,104 +1,162 @@
-.category-card img {
-    width: 100%;
-    height: auto;
+* {
+    scroll-behavior: smooth;
+}
+
+.features-section {
+    background-color: #f8f9fa;
+}
+
+.feature-box {
+    background-color: #ffffff;
     border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.category-card h3 {
-    text-align: center;
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-box i {
+    color: #007bff;
+}
+
+.feature-box h4 {
     margin-top: 10px;
+    font-size: 1.25rem;
+    color: #333;
 }
 
-.features i {
-    margin-bottom: 10px;
+.feature-box p {
+    font-size: 1rem;
+    color: #666;
 }
 
-.social-links {
+/* Carousel Section Styling */
+.header_carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    margin-top: 3px;
+}
+
+.header_carousel .carousel-inner {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.header_carousel .carousel-item img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 0.8;
+}
+
+.carousel-indicators li {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dots are semi-transparent */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff;
+
+}
+
+@media (max-width: 768px) {
+    .header_carousel .carousel-item img {
+        height: 300px;
+
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+
+    }
+}
+
+
+/* footer section */
+.footer-section {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.footer-section h4 {
+    color: #f8f9fa;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #dcdcdc;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+.footer-section a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-section .social-icons {
+    padding: 0;
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 
-.social-links li a {
-    color: #fff;
-    font-size: 1.5em;
+.footer-section .social-icons li {
+    display: inline-block;
 }
 
-/* styles.css carousel slides*/
-.carousel {
-    margin: 0;
-    width: 100%;
-    padding: 0;
-
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 75vh;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-}
-
-/*category*/
-.shop-by-category {
-    padding: 40px 20px;
-    /* Spacing around the section */
-    text-align: center;
-    /* Centering the text */
-    background-color: #f8f9fa;
-    /* Light background color for contrast */
-}
-
-.shop-by-category h2 {
-    font-size: 2.5rem;
-    /* Size of the category heading */
-    margin-bottom: 30px;
-    /* Space below the heading */
-    font-weight: bold;
-    /* Bold text */
-    color: #343a40;
-    /* Dark color for the heading */
-}
-
-.category-card {
-    background-color: #ffffff;
-    /* White background for each card */
-    border-radius: 10px;
-    /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    overflow: hidden;
-    /* Prevent overflow for rounded corners */
-    transition: transform 0.3s ease;
-    /* Smooth scaling on hover */
-    margin-bottom: 30px;
-    /* Space between cards */
-}
-
-.category-card img {
-    width: 100%;
-    /* Full width of the card */
-    height: auto;
-    /* Maintain aspect ratio */
-    object-fit: cover;
-    /* Ensure the image covers the card */
-}
-
-.category-card h3 {
-    margin: 15px 0;
-    /* Space above and below the text */
+.footer-section .social-icons li a {
+    color: #ffffff;
     font-size: 1.5rem;
-    /* Font size for category names */
-    color: #495057;
-    /* Darker color for text */
 }
 
-/* Hover effects */
-.category-card:hover {
-    transform: scale(1.05);
-    /* Scale up slightly on hover */
-    cursor: pointer;
-    /* Change cursor on hover */
+.footer-section .social-icons li a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    background-color: #212529;
+    color: #868e96;
+    font-size: 0.875rem;
+}
+
+.footer-bottom a {
+    color: #007bff;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
 }
