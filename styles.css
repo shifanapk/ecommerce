@@ -1,0 +1,104 @@
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.category-card h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.features i {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links li a {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+/* styles.css carousel slides*/
+.carousel {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/*category*/
+.shop-by-category {
+    padding: 40px 20px;
+    /* Spacing around the section */
+    text-align: center;
+    /* Centering the text */
+    background-color: #f8f9fa;
+    /* Light background color for contrast */
+}
+
+.shop-by-category h2 {
+    font-size: 2.5rem;
+    /* Size of the category heading */
+    margin-bottom: 30px;
+    /* Space below the heading */
+    font-weight: bold;
+    /* Bold text */
+    color: #343a40;
+    /* Dark color for the heading */
+}
+
+.category-card {
+    background-color: #ffffff;
+    /* White background for each card */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    overflow: hidden;
+    /* Prevent overflow for rounded corners */
+    transition: transform 0.3s ease;
+    /* Smooth scaling on hover */
+    margin-bottom: 30px;
+    /* Space between cards */
+}
+
+.category-card img {
+    width: 100%;
+    /* Full width of the card */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure the image covers the card */
+}
+
+.category-card h3 {
+    margin: 15px 0;
+    /* Space above and below the text */
+    font-size: 1.5rem;
+    /* Font size for category names */
+    color: #495057;
+    /* Darker color for text */
+}
+
+/* Hover effects */
+.category-card:hover {
+    transform: scale(1.05);
+    /* Scale up slightly on hover */
+    cursor: pointer;
+    /* Change cursor on hover */
+}
