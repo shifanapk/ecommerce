@@ -57,185 +57,84 @@
         </div>
     </section>
 
-
     <section class="products py-5 my-5" id="products">
         <div class="container ">
             <div class="section_title text-center mb-5">
                 <h1 class="text-capitalize">Products</h1>
             </div>
             <div class="row">
+                <!-- Filters Section -->
                 <div class="col-md-3 border-right mb-small-5">
                     <h4 class="mb-5 border-bottom">Filters</h4>
                     <div class="mb-5">
                         <label><b>Category</b></label>
                         <ul class="list-group">
-                            <li class="list-group-item">Category 1</li>
-                            <li class="list-group-item">Category 2</li>
-                            <li class="list-group-item">Category 3</li>
-                            <li class="list-group-item">Category 4</li>
-                            <li class="list-group-item">Category 5</li>
+                            <li class="list-group-item" onclick="filterProducts('all')">All</li>
+                            <li class="list-group-item" onclick="filterProducts('cosmetics')">Cosmetics</li>
+                            <li class="list-group-item" onclick="filterProducts('womens-clothing')">Women's Clothing
+                            </li>
+                            <li class="list-group-item" onclick="filterProducts('vegetables')">Vegetables</li>
                         </ul>
                     </div>
                     <div>
-                        <form>
-                            <div class="form-group">
-                                <label><b>Price</b></label>
-                                <input type="range" min="100" max="1000" step="100" class="form-control-range">
-                            </div>
-                        </form>
+                        <label><b>Price</b></label>
+                        <input type="range" min="100" max="1000" step="100" class="form-control-range" id="priceRange"
+                            oninput="filterByPrice()">
                         <div class="d-flex justify-content-between">
                             <label>₹100</label>
                             <label>₹1000</label>
                         </div>
                     </div>
                 </div>
+
+                <!-- Products Section -->
                 <div class="col-md-9">
                     <div class="row mb-5">
-                        <div class="col-md-4 col-12">
+                        <!-- Cosmetics -->
+                        <div class="col-md-4 col-12 product-item cosmetics" data-price="500">
                             <div class="single_product shadow text-center p-1">
                                 <div class="product_img">
-                                    <a href="product_detail.html"><img src="assets/images/product1.png"
-                                            class="img img-fluid" alt=""></a>
+                                    <a href="product_detail.html"><img src="images/pdt1.png" class="img img-fluid"
+                                            alt=""></a>
                                 </div>
                                 <div class="product-caption my-3">
-                                    <div class="product-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                    <h5><a href="product_detail.html">Green Dress with
-                                            details</a></h5>
+                                    <h5><a href="product_detail.html">Lipstick-190903</a></h5>
                                     <div class="price">
-                                        <b><span class="mr-1">₹</span><span>400</span></b>
+                                        <b><span class="mr-1">₹</span><span>500</span></b>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-12">
-                            <div class="single_product shadow text-center p-1 mt-small-5
-        mb-small-5">
-                                <div class="product_img">
-                                    <a href="product_detail.html"><img src="assets/images/product2.png"
-                                            class="img img-fluid" alt=""></a>
-                                    <div class="new_product"><span class="badge py-2 px-3 badge-pill
-                badge-danger">New</span>
-                                    </div>
-                                </div>
-                                <div class="product-caption my-3">
-                                    <div class="product-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                    <h5><a href="product_detail.html">Green Dress with
-                                            details</a></h5>
-                                    <div class="price">
-                                        <b><span class="mr-1">₹</span><span>400</span></b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-12">
+
+                        <!-- Women's Clothing -->
+                        <div class="col-md-4 col-12 product-item womens-clothing" data-price="700">
                             <div class="single_product shadow text-center p-1">
                                 <div class="product_img">
-                                    <a href="product_detail.html"><img src="assets/images/product3.png"
-                                            class="img img-fluid" alt=""></a>
-                                    <div class="new_product">
-                                        <span class="badge py-2 px-3 badge-pill
-                badge-danger">New</span>
-                                        ew</span>
-                                    </div>
+                                    <a href="product_detail.html"><img src="images/latest4.png" class="img img-fluid"
+                                            alt=""></a>
+                                    <div class="new_product"><span
+                                            class="badge py-2 px-3 badge-pill badge-danger">New</span></div>
                                 </div>
                                 <div class="product-caption my-3">
-                                    <div class="product-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                    <h5><a href="product_detail.html">Green Dress with
-                                            details</a></h5>
+                                    <h5><a href="product_detail.html">Women's Dress</a></h5>
                                     <div class="price">
-                                        <b><span class="mr-1">₹</span><span>400</span></b>
+                                        <b><span class="mr-1">₹</span><span>700</span></b>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 col-12">
+
+                        <!-- Vegetables -->
+                        <div class="col-md-4 col-12 product-item vegetables" data-price="1200">
                             <div class="single_product shadow text-center p-1">
                                 <div class="product_img">
-                                    <a href="product_detail.html"><img src="assets/images/product3.png"
-                                            class="img img-fluid" alt=""></a>
-                                    <div class="new_product">
-                                        <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
-                                    </div>
+                                    <a href="product_detail.html"><img src="images/pdt6.png" class="img img-fluid"
+                                            alt=""></a>
                                 </div>
                                 <div class="product-caption my-3">
-                                    <div class="product-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                    <h5><a href="product_detail.html">Green Dress with
-                                            details</a></h5>
+                                    <h5><a href="product_detail.html">Sun Dryed Chilli Pepper</a></h5>
                                     <div class="price">
-                                        <b><span class="mr-1">₹</span><span>400</span></b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                            <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
-                                <div class="product_img">
-                                    <a href="product_detail.html"><img src="assets/images/product2.png"
-                                            class="img img-fluid" alt=""></a>
-                                    <div class="new_product">
-                                        <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
-                                    </div>
-                                </div>
-                                <div class="product-caption my-3">
-                                    <div class="product-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                    <h5><a href="product_detail.html">Green Dress with
-                                            details</a></h5>
-                                    <div class="price">
-                                        <b><span class="mr-1">₹</span><span>400</span></b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                            <div class="single_product shadow text-center p-1">
-                                <div class="product_img">
-                                    <a href="product_detail.html"><img src="assets/images/product1.png"
-                                            class="img img-fluid" alt=""></a>
-                                </div>
-                                <div class="product-caption my-3">
-                                    <div class="product-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                    <h5><a href="product_detail.html">Green Dress with
-                                            details</a></h5>
-                                    <div class="price">
-                                        <b><span class="mr-1">₹</span><span>400</span></b>
+                                        <b><span class="mr-1">₹</span><span>1200</span></b>
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +144,6 @@
             </div>
         </div>
     </section>
-
 
     <footer class="footer-section">
         <div class="container py-5">
