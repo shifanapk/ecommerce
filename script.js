@@ -26,3 +26,54 @@ function filterByPrice() {
         }
     } filterByPrice(); // Call price filter after category filter
 }
+
+// Add product to cart
+const addToCartBtn = document.getElementById('addToCartBtn');
+addToCartBtn.addEventListener('click', function () {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Get quantity
+    const quantity = document.getElementById('quantity').value;
+
+    // Check if product is already in cart
+    const productInCart = cart.find(item => item.id === product.id);
+    if (productInCart) {
+        productInCart.quantity += parseInt(quantity);
+    } else {
+        cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity: parseInt(quantity),
+            image: product.image
+        });
+    }
+
+    // Save cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert('Product added to cart!');
+});
+
+// Quantity button logic
+const quantityInput = document.getElementById('quantity');
+const quantityMinusBtn = document.getElementById('quantity-minus');
+const quantityPlusBtn = document.getElementById('quantity-plus');
+
+quantityMinusBtn.addEventListener('click', function () {
+    let quantityValue = parseInt(quantityInput.value);
+    if (quantityValue > 1) {
+        quantityInput.value = quantityValue - 1;
+    }
+});
+
+quantityPlusBtn.addEventListener('click', function () {
+    let quantityValue = parseInt(quantityInput.value);
+    if (quantityValue < 10) {
+        quantityInput.value = quantityValue + 1;
+    }
+});
+
+
+
+
