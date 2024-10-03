@@ -74,6 +74,3 @@ quantityPlusBtn.addEventListener('click', function () {
     }
 });
 
-
-
-

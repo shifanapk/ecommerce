@@ -133,7 +133,8 @@
                                 <textarea id="form76" class="md-textarea form-control" rows="4"></textarea>
                             </div>
                             <div class="text-center">
-                                <a href="order_confirmation.html" class="btn btn-primary btn-lg shadow">
+                                <a href="order_confirmation.html" class="btn btn-primary btn-lg shadow"
+                                    id="purchaseBtn">
                                     <i class="fa fa-check mr-2"></i>Purchase
                                 </a>
                             </div>
@@ -234,6 +235,7 @@
                 `;
 
                 // Calculate total
+
                 totalAmount += price * quantity;
             });
 
@@ -247,6 +249,32 @@
                     <span><strong>₹${totalAmount}</strong></span>
                 </li>
             `;
+        });
+
+    </script>
+
+    <script>
+        document.getElementById('purchaseBtn').addEventListener('click', function (e) {
+            e.preventDefault();  // Prevent default anchor behavior
+
+            // Generate a random order number
+            const orderNumber = Math.floor(Math.random() * 100000);
+
+            // Ensure totalAmount is calculated correctly
+            let totalAmount = 0;
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Calculate total amount from the cart
+            cart.forEach(item => {
+                totalAmount += item.price * item.quantity;
+            });
+
+            // Store the order number and total price in localStorage
+            localStorage.setItem('orderNumber', orderNumber);
+            localStorage.setItem('totalPrice', totalAmount);  // Correct total price
+
+            // Redirect to order confirmation page
+            window.location.href = 'order_confirmation.html';
         });
     </script>
 
