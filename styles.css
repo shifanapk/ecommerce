@@ -385,6 +385,8 @@
 
 
 /* footer section */
+
+
 .footer-section {
     background-color: #343a40;
     color: #ffffff;
@@ -840,5 +842,147 @@ h5 {
     .col-6 {
         margin-bottom: 20px;
 
+    }
+}
+
+/*CONTACT US STYLING*/
+.contact-us {
+    background-color: #ADD8E6;
+    color: #333;
+}
+
+.contact-us h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.contact-us p {
+    font-size: 1.2rem;
+    color: #1c2833;
+    font-weight: bold;
+}
+
+/* Get In Touch Section */
+.contact-us .get-in-touch {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-us .get-in-touch ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #343a40;
+}
+
+.contact-us .get-in-touch ul li i {
+    color: #007bff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Contact Form Styling */
+.contact-us .form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-us .form-group input,
+.contact-us .form-group textarea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.1rem;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.contact-us .form-group input:focus,
+.contact-us .form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.contact-us .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Location Map */
+.contact-us iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .contact-us .section_title h1 {
+        font-size: 2rem;
+    }
+
+    .contact-us .get-in-touch h3,
+    .contact-us .get-in-touch p,
+    .contact-us .get-in-touch ul {
+        text-align: center;
+    }
+
+    .contact-us .get-in-touch ul li {
+        font-size: 1rem;
+    }
+
+    .contact-us .get-in-touch {
+        margin-bottom: 30px;
+    }
+
+    .contact-us .form-group input,
+    .contact-us .form-group textarea {
+        font-size: 1rem;
+    }
+
+    .contact-us .btn-primary {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .contact-us iframe {
+        height: 300px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-us h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-us p {
+        font-size: 1rem;
+    }
+
+    .contact-us .get-in-touch ul li {
+        font-size: 0.9rem;
+    }
+
+    .contact-us .form-group input,
+    .contact-us .form-group textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .contact-us .btn-primary {
+        font-size: 0.9rem;
+    }
+
+    .contact-us iframe {
+        height: 250px;
     }
 }
