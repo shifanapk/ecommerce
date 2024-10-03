@@ -765,7 +765,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     padding: 40px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(207, 169, 169, 0.1);
 }
 
 .confirmation-header {
@@ -776,4 +776,69 @@ body {
 
 .order-details {
     font-size: 18px;
+}
+
+
+/* General styles for all screen sizes for ABOUT US */
+.row .col-md-3 {
+    margin-bottom: 20px;
+    /* Adds spacing between the rows */
+}
+
+.border {
+    transition: transform 0.3s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.border:hover {
+    transform: translateY(-10px);
+    /* Elevates the card on hover */
+}
+
+.border i {
+    color: #007bff;
+    /* Default icon color */
+}
+
+h5 {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    .row .col-md-3 {
+        margin-bottom: 15px;
+        /* Adds spacing on smaller screens */
+    }
+
+    .border i {
+        font-size: 2.5rem;
+        /* Decrease icon size on smaller screens */
+    }
+
+    h5 {
+        font-size: 1.2rem;
+        /* Adjust text size */
+    }
+}
+
+/* Media query for phones and extra-small screens */
+@media (max-width: 576px) {
+    .row .col-md-3 {
+        margin-bottom: 10px;
+    }
+
+    .border i {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    .col-6 {
+        margin-bottom: 20px;
+
+    }
 }
